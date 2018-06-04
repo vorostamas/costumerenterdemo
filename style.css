@@ -1,0 +1,50 @@
+.thumbnail {
+    width: 100px;
+    height: 100px;
+}
+
+.thumbnail:hover {
+    position:absolute;
+    /* top:40px;
+    left:50px; */
+    width:300px;
+    height:auto;
+    display:block;
+    z-index:999;    
+    /* border: 2px solid lightgray; */
+}
+
+table {
+    margin-top: 56px;
+}
+
+.btn-danger {
+    background-color:#b16a6a;
+    border-color:#b16a6a; 
+}
+
+.btn-warning {
+    background-color:#9e7c45;
+    border-color:#9e7c45; 
+    color: #fff;
+}
+
+.btn-warning:hover {
+    color: #fff;
+}
+
+.pagination .page-link{
+    background-color: rgb(240, 240, 240);
+    /* background-color: #dee2e6; */
+    color: #474747;
+    border-color: #dee2e6;
+}
+
+.page-item.active .page-link {
+    background-color: #7d7d7d;
+    border-color: #929292;
+}
+
+.page-link:focus {
+    box-shadow: 0 0 0 0.2rem rgba(100, 100, 100, 0.25)
+}
