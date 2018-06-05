@@ -1,17 +1,16 @@
 .thumbnail {
     width: 100px;
     height: 100px;
+    max-width: unset;
 }
 
 .thumbnail:hover {
     position:absolute;
-    /* top:40px;
-    left:50px; */
-    width:300px;
+    margin-top: -50px;
+    width:300px;    
     height:auto;
     display:block;
-    z-index:999;    
-    /* border: 2px solid lightgray; */
+    z-index:999;
 }
 
 table {
@@ -47,4 +46,47 @@ table {
 
 .page-link:focus {
     box-shadow: 0 0 0 0.2rem rgba(100, 100, 100, 0.25)
+}
+
+.orders .col {
+    padding: unset;
+}
+
+.costume-form {
+    margin-top: 60px;
+}
+
+.rent-button {
+    background-color: #4789cf;
+}
+
+.rent-button-disabled {
+    background-color: #171c22;
+    cursor: not-allowed;
+}
+
+.btn-primary.disabled, .btn-primary:disabled {
+    background-color: #4e6080;
+    border-color: #404f68;
+}
+
+.fa-check {
+    color: green;
+}
+
+.not-available-cross {
+    color: #a00909;
+}
+
+.table-warning>td{
+    background-color: #fffbee;
+}
+
+.table-hover .table-warning:hover>td, .table-hover .table-warning:hover>th {
+    background-color: #fdf0c4;
+}
+
+.badge-warning {
+    color: white;
+    background-color: #a8892c;
 }
