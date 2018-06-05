@@ -36,7 +36,7 @@
 
         <!-- Nav links -->
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
                     <a class="nav-link" href="index.html">Orders</a>
                 </li>
@@ -49,14 +49,19 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Customers</a>
                 </li>
-                <li class="nav-item">
-                    <form class="form-inline" action="/action_page.php">
-                        <input class="form-control mr-sm-2" id="searchInput" type="text" placeholder="Search">
-                        <button class="btn btn-primary d-inline" type="button">
-                            <i class="fas fa-plus"></i> New</button>
-                    </form>
-                </li>
             </ul>
+            <form class="form-inline">
+                <div class="input-group">
+                    <input type="text" class="form-control" id="searchInput" placeholder="Search">
+                    <div class="input-group-append">
+                        <button class="btn btn-default search-button mr-sm-2" type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <button class="btn btn-primary create-new-button" type="button">
+                <i class="fas fa-plus"></i> New</button>
         </div>
     </nav>
 
@@ -85,26 +90,26 @@
                                 <td class="align-middle">Cat costume</td>
                                 <td class="align-middle">1250 Ft</td>
                                 <td class="align-middle">
-                                    <p class="d-none d-sm-none d-md-inline d-xl-inline">Available</p>
-                                    <i class="fas fa-check d-inline d-sm-inline d-md-none d-xl-none"></i>
+                                    <p class="d-none d-md-inline d-xl-inline">Available</p>
+                                    <i class="fas fa-check d-inline d-md-none d-xl-none"></i>
                                 </td>
-                                <td class="align-middle">
+                                <td class="align-middle actions">
                                     <div class="btn-group-vertical">
                                         <button type="button" class="btn btn-primary rent-button">
-                                            <i class="fas fa-plus d-sm-inline d-md-none d-xl-inline"></i>
-                                            <p class="d-none d-sm-none d-md-inline d-xl-inline"> Rent</p>
+                                            <i class="fas fa-plus d-inline d-md-none d-xl-inline"></i>
+                                            <p class="d-none d-md-inline d-xl-inline"> Rent</p>
                                         </button>
                                         <button type="button" class="btn btn-secondary">
                                             <i class="fas fa-pencil-alt d-sm-inline d-md-none d-xl-inline"></i>
-                                            <p class="d-none d-sm-none d-md-inline d-xl-inline"> Edit</p>
+                                            <p class="d-none d-md-inline d-xl-inline"> Edit</p>
                                         </button>
-                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">
+                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalDelete">
                                             <i class="fas fa-times d-sm-inline d-md-none d-xl-inline"></i>
-                                            <p class="d-none d-sm-none d-md-inline d-xl-inline"> Delete</p>
+                                            <p class="d-none d-md-inline d-xl-inline"> Delete</p>
                                         </button>
                                         <button type="button" class="btn btn-warning">
                                             <i class="far fa-trash-alt d-sm-inline d-md-none d-xl-inline"></i>
-                                            <p class="d-none d-sm-none d-md-inline d-xl-inline"> Archive</p>
+                                            <p class="d-none d-md-inline d-xl-inline"> Archive</p>
                                         </button>
                                     </div>
                                 </td>
@@ -120,9 +125,8 @@
                                     <p class="d-none d-sm-none d-md-inline d-xl-inline">Not available</p>
                                     <i class="fas fa-times not-available-cross d-inline d-sm-inline d-md-none d-xl-none"></i>
                                 </td>
-                                <td>
+                                <td class="actions">
                                     <div class="btn-group-vertical">
-                                        <!-- <button type="button" class="btn btn-primary rent-button rent-button-disabled disabled" disabled>Rent</button> -->
                                         <button type="button" class="btn btn-primary rent-button rent-button-disabled disabled" disabled>
                                             <i class="fas fa-plus d-sm-inline d-md-none d-xl-inline"></i>
                                             <p class="d-none d-sm-none d-md-inline d-xl-inline"> Rent</p>
@@ -131,7 +135,7 @@
                                             <i class="fas fa-pencil-alt d-sm-inline d-md-none d-xl-inline"></i>
                                             <p class="d-none d-sm-none d-md-inline d-xl-inline"> Edit</p>
                                         </button>
-                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">
+                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalDelete">
                                             <i class="fas fa-times d-sm-inline d-md-none d-xl-inline"></i>
                                             <p class="d-none d-sm-none d-md-inline d-xl-inline"> Delete</p>
                                         </button>
@@ -153,7 +157,7 @@
                                     <p class="d-none d-sm-none d-md-inline d-xl-inline">Available</p>
                                     <i class="fas fa-check d-inline d-sm-inline d-md-none d-xl-none"></i>
                                 </td>
-                                <td>
+                                <td class="actions">
                                     <div class="btn-group-vertical">
                                         <button type="button" class="btn btn-primary rent-button">
                                             <i class="fas fa-plus d-sm-inline d-md-none d-xl-inline"></i>
@@ -163,7 +167,7 @@
                                             <i class="fas fa-pencil-alt d-sm-inline d-md-none d-xl-inline"></i>
                                             <p class="d-none d-sm-none d-md-inline d-xl-inline"> Edit</p>
                                         </button>
-                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">
+                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalDelete">
                                             <i class="fas fa-times d-sm-inline d-md-none d-xl-inline"></i>
                                             <p class="d-none d-sm-none d-md-inline d-xl-inline"> Delete</p>
                                         </button>
@@ -185,7 +189,7 @@
                                     <p class="d-none d-sm-none d-md-inline d-xl-inline">Available</p>
                                     <i class="fas fa-check d-inline d-sm-inline d-md-none d-xl-none"></i>
                                 </td>
-                                <td class="align-middle">
+                                <td class="align-middle actions">
                                     <div class="btn-group-vertical">
                                         <button type="button" class="btn btn-primary rent-button">
                                             <i class="fas fa-plus d-sm-inline d-md-none d-xl-inline"></i>
@@ -195,7 +199,7 @@
                                             <i class="fas fa-pencil-alt d-sm-inline d-md-none d-xl-inline"></i>
                                             <p class="d-none d-sm-none d-md-inline d-xl-inline"> Edit</p>
                                         </button>
-                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">
+                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalDelete">
                                             <i class="fas fa-times d-sm-inline d-md-none d-xl-inline"></i>
                                             <p class="d-none d-sm-none d-md-inline d-xl-inline"> Delete</p>
                                         </button>
@@ -219,7 +223,7 @@
                                     <p class="d-none d-sm-none d-md-inline d-xl-inline">Not available</p>
                                     <i class="fas fa-times not-available-cross d-inline d-sm-inline d-md-none d-xl-none"></i>
                                 </td>
-                                <td class="align-middle">
+                                <td class="align-middle actions">
                                     <div class="btn-group-vertical">
                                         <button type="button" class="btn btn-primary rent-button rent-button-disabled disabled">
                                             <i class="fas fa-plus d-sm-inline d-md-none d-xl-inline"></i>
@@ -229,10 +233,14 @@
                                             <i class="fas fa-pencil-alt d-sm-inline d-md-none d-xl-inline"></i>
                                             <p class="d-none d-sm-none d-md-inline d-xl-inline"> Edit</p>
                                         </button>
-                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal"><i class="fas fa-times d-sm-inline d-md-none d-xl-inline"></i>
-                                            <p class="d-none d-sm-none d-md-inline d-xl-inline"> Delete</p></button>
-                                        <button type="button" class="btn btn-warning"><i class="far fa-trash-alt d-sm-inline d-md-none d-xl-inline"></i>
-                                            <p class="d-none d-sm-none d-md-inline d-xl-inline"> Unarchive</p></button>
+                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalDelete">
+                                            <i class="fas fa-times d-sm-inline d-md-none d-xl-inline"></i>
+                                            <p class="d-none d-sm-none d-md-inline d-xl-inline"> Delete</p>
+                                        </button>
+                                        <button type="button" class="btn btn-warning">
+                                            <i class="far fa-trash-alt d-sm-inline d-md-none d-xl-inline"></i>
+                                            <p class="d-none d-sm-none d-md-inline d-xl-inline"> Unarchive</p>
+                                        </button>
                                     </div>
                                 </td>
                             </tr>
@@ -249,7 +257,7 @@
                                     <p class="d-none d-sm-none d-md-inline d-xl-inline">Available</p>
                                     <i class="fas fa-check d-inline d-sm-inline d-md-none d-xl-none"></i>
                                 </td>
-                                <td class="align-middle">
+                                <td class="align-middle actions">
                                     <div class="btn-group-vertical">
                                         <button type="button" class="btn btn-primary rent-button">
                                             <i class="fas fa-plus d-sm-inline d-md-none d-xl-inline"></i>
@@ -259,7 +267,7 @@
                                             <i class="fas fa-pencil-alt d-sm-inline d-md-none d-xl-inline"></i>
                                             <p class="d-none d-sm-none d-md-inline d-xl-inline"> Edit</p>
                                         </button>
-                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">
+                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalDelete">
                                             <i class="fas fa-times d-sm-inline d-md-none d-xl-inline"></i>
                                             <p class="d-none d-sm-none d-md-inline d-xl-inline"> Delete</p>
                                         </button>
@@ -276,11 +284,13 @@
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- PAGINATION -->
-        <div class="container">
-            <div class="row">
-                <ul class="pagination mx-auto">
+    <!-- PAGINATION -->
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <ul class="pagination justify-content-center">
                     <li class="page-item">
                         <a class="page-link" href="#">Previous</a>
                     </li>
@@ -302,9 +312,10 @@
     </div>
 
 
-    <!-- MODAL -->
-    <!-- The Modal -->
-    <div class="modal fade" id="myModal">
+
+    <!-- MODALS -->
+    <!-- Modal DELETE -->
+    <div class="modal fade" id="modalDelete">
         <div class="modal-dialog">
             <div class="modal-content">
 
