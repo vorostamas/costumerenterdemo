@@ -1,12 +1,10 @@
 @media print {
 
-
     header nav, footer {
         display: none;
     }
 
-    img {
+    .actions {
         display: none;
-        /* max-width: 100%; */
     }
  }
