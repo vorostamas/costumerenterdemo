@@ -28,10 +28,6 @@ table {
     padding: unset;
 }
 
-td {
-    max-width: 80px;
-}
-
  /* BUTTONS */
 .btn-danger {
     background-color:#b16a6a;
