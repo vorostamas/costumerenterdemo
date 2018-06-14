@@ -19,13 +19,17 @@ table {
     margin-top: 56px;
 }
 
-/* Align table cell content center  */
+/* Align table cell content center */
 .table td, .table th { 
     text-align: center;   
  }
  
  .orders .col {
     padding: unset;
+}
+
+td {
+    max-width: 80px;
 }
 
  /* BUTTONS */
