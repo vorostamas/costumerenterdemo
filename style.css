@@ -2,15 +2,16 @@
     width: 100px;
     height: 100px;
     max-width: unset;
+    transition: -webkit-transform 0.25s ease;
 }
 
 .thumbnail:hover {
-    position:absolute;
-    margin-top: -50px;
-    width:300px;    
-    height:auto;
-    display:block;
-    z-index:999;
+    cursor: zoom-in;
+}
+
+.thumbnail:active {
+    -webkit-transform: scale(2);
+    transform: scale(2);
 }
 
 /* TABLE */
